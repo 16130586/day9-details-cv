@@ -1,0 +1,346 @@
+$blue-high-light: #A5C6DB;
+$blue-color: #007FB2;
+$white-light-color: #EFEFEF;
+$gray-color: #D9DADB;
+$main-background-color: #F7F8F9;
+:root {
+    font-size: 62.5%;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.2rem;
+    color: gray;
+    background-color: $main-background-color;
+}
+
+/*
+ flex display:
+*/
+
+.flex-displayer {
+    display: flex;
+    .flex-1 {
+        flex: 1;
+    }
+    .flex-2 {
+        flex: 2;
+    }
+    .flex-3 {
+        flex: 3;
+    }
+    .mid-vertical {
+        align-items: center;
+    }
+    .left-most {
+        align-self: flex-start;
+    }
+    .right-most {
+        align-self: flex-end;
+    }
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.2x {
+    font-size: 2rem;
+}
+
+.5x {
+    font-size: 5rem;
+}
+
+.rounded-avatar {
+    border-radius: 50%;
+}
+
+
+.faded {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+}
+
+.nav--switch-page {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    .left-nav {
+        display: flex;
+        align-items: center;
+        .logo--linkedin {
+            padding: 0 1rem 0 1rem;
+        }
+        .select--linkedin {
+            padding: 0 1rem 0 1rem;
+            border-left: 2px solid gray;
+            outline: none;
+            background-color: transparent;
+            border: none;
+            font-size: 1.75rem;
+            font-weight: 600;
+            select {
+                font-size: 1.3rem;
+                background-color: transparent;
+                outline: none;
+                border: none;
+            }
+        }
+    }
+    .header-search {
+        border: 2px solid gray;
+        width: 50%;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+}
+
+.blacktext--medium {
+    color: black;
+    font-size: 1.3rem;
+}
+
+.icon--small {
+    padding: 0 .5rem 0 .5rem;
+    margin-right: 1rem;
+    display: inline-block;
+}
+
+.link-icon--showcase {
+    list-style: none;
+    li {
+        display: inline-block;
+        margin-right: 1.5rem;
+    }
+}
+
+.nav--switch-content {
+    text-align: center;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    font-weight: 600px;
+    padding: 1.5rem;
+}
+
+.content-link {
+    &:link,
+    &:active {
+        border-bottom: 2px solid blue;
+        padding-bottom: 1.2rem;
+        transition: padding 0.2s;
+        color: black;
+    }
+}
+
+.main-page-content {
+    display: flex;
+    width: 94%;
+    margin: 2rem auto 2rem auto;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/*
+    all style for user-information styled by card
+    
+*/
+
+.card-row {
+    padding: .3rem;
+    width: 100%;
+    margin: 1rem auto 1rem auto;
+}
+
+.card--user-details,
+.card,
+.card--no-margin {
+    border: 1px solid gray;
+    background-color: white;
+
+}
+
+.card,
+.card--no-margin {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    .card__header {
+        font-size: 1.6rem;
+        font-weight: 900;
+        color: black;
+        text-align: left;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid gray;
+    }
+    .card__content {
+        .card__article {
+            padding: 2.4rem 0;
+            .article__header--normal {
+                font-size: 1.6rem;
+                font-weight: 800;
+                color: black;
+                margin-bottom: 1.6rem;
+            }
+            .article__header--high-light {
+                font-size: 1.6rem;
+                font-weight: 600;
+                color: $blue-high-light;
+                margin-bottom: 1.6rem;
+            }
+            .article__header--faded {
+                font-size: 1.6rem;
+                font-weight: 400;
+                color: inherit;
+                margin-bottom: 1.6rem;
+            }
+            .article__content {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+}
+
+.card:not(:last-child) {
+    margin-right: 6.4rem;
+}
+
+.card--main-content {
+    padding: 2rem;
+    margin-bottom: 3.2rem;
+}
+
+.card--user-details {
+    .card__avatar__box {
+        padding: 4rem;
+        text-align: center;
+        .card__avatar {
+            border-radius: 50%;
+            margin-bottom: .8rem;
+        }
+        .card__user--name {
+            margin-bottom: .2rem;
+        }
+    }
+    .card__connects__views {
+        text-align: center;
+        .card__connects {
+            border-right: 1px solid gray;
+        }
+    }
+    .card__content {
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+}
+
+.content {
+    padding: 0 3.2rem 0 3.2rem;
+    &-row {
+        width: 100%;
+        margin-bottom: 3.2rem;
+    }
+}
+
+figure {
+    border: 1px solid $gray-color;
+    background-color: $white-light-color;
+    text-align: center;
+    figcaption {
+        font-size: 1.6rem;
+        font-weight: 900;
+        color: black;
+        padding: 1.5rem;
+    }
+}
+
+.toggle--skill-status,
+.avatar-example--showcase {
+    display: inline-block;
+}
+
+.toggle--skill-status {
+    text-align: center;
+    position: relative;
+    .toggle__status {
+        display: inline-block;
+        background-color: $blue-color;
+        padding: 2rem;
+        border-radius: 50%;
+        position: relative;
+        z-index: 10;
+        color: $white-light-color;
+    }
+
+    .toggle__skill {
+        display: inline-block;
+        padding: 2rem;
+        padding-left: 5rem;
+        border: 2px solid $white-light-color;
+        border-radius: 30px;
+        margin-left: -4.5rem;
+        position: relative;
+        z-index: 5;
+    }
+
+}
+
+.avatar-example--showcase {
+    list-style: none;
+    li {
+        display: inline-block;
+    }
+    .avatar-example__more {
+        width: 6.4rem;
+        height: 6.4rem;
+        background-color: $gray-color;
+        position: relative;
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, - 50%);
+        }
+    }
+    li:not(:last-child) {
+        margin-right: .5rem;
+    }
+}
+
+.u-margin-bottom--medium {
+    margin-bottom: 2rem;
+}
+
+.u-margin-top--small {
+    margin-top: 1rem;
+}
+
+.u-margin-top--medium {
+    margin-top: 2rem;
+}
+
+.u-innline-block {
+    display: inline-block;
+}
+
+.u-margin-right--small {
+    margin-right: 1rem;
+}

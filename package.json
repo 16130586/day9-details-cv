@@ -1,0 +1,16 @@
+{
+    "name": "detail-real-pixels",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+        "node-sass": "^4.9.3"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "compile:sass": "node-sass style.scss style.proceeed.css --watch"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
